@@ -1,20 +1,26 @@
 .pokemon-card{
-    display: block;
+    display: flex;
+    flex-direction: column;
     background-color: $card-color;
     width: fit-content;
-    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+
+    img{
+        width: 80%;
+        margin: 0 auto;
+    }
 
     .name{
         font-weight: 700;
         text-align: center;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     .spec {
         display: flex;
         gap: 5px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: 25px 10px;
 
         div{
             text-align: center;
@@ -62,7 +68,49 @@
         }
     }
 
-    .color-poison{
-        background-color: #9bcb50;
+    .type {
+        margin-bottom: 20px;
+
+        ul{
+            display: flex;     
+            justify-content: center;
+            gap: 5px;
+            
+            li{
+                padding: 5px 10px;
+                border-radius: 5px;
+
+                &.color-plante{
+                    background-color: #b87ec8;
+                }
+                &.color-eau{
+                    background-color: #33a8d6;
+                }
+                &.color-poison{
+                    background-color: #9bcb50;
+                }
+                &.color-insecte{
+                    background-color: #719e3e;
+                }
+                &.color-combat{
+                    background-color: #d56722;
+                }
+                &.color-feu{
+                    background-color: #fc7d23;
+                }
+                &.color-fée{
+                    background-color: #fcb9e8;
+                }
+                &.color-normal{
+                    background-color: #a3abae;
+                }
+                &.color-electrik{
+                    background-color: #eed535;
+                }
+                &.color-vol{
+                    background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+                }
+            }
+        }
     }
 }

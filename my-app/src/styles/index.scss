@@ -1,13 +1,46 @@
 @import "./settings";
 @import "./components/card";
+@import "./components/pokemons";
+@import "./components/navigation";
+
+body{
+    background-color: $body-color;
+    font-family: 'Montserrat',Arial, sans-serif;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+h1{
+    background: linear-gradient(90deg, rgba(252,125,35,1) 31%, rgba(184,126,200,1) 74%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: 'Nunito', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+h3.error {
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    background-color: $error-color;
+    padding: 10px;
+}
+
 
 p{
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-color: $body-color;
-    font-family: 'Montserrat',Arial, sans-serif
+ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
 }
+
 

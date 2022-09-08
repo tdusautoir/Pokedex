@@ -1,0 +1,16 @@
+.navigation{
+
+    margin-bottom: 50px;
+
+    ul{
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+    }
+}

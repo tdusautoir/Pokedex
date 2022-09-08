@@ -16,13 +16,15 @@ const Card = ({ pokemons }) => {
           {pokemons.cp}
         </div>
       </div>
-      <ul className="Type">
-        {pokemons.types.map((type, index) => (
-          <li className={"color-" + type.toLowerCase()} key={index}>
-            {type}
-          </li>
-        ))}
-      </ul>
+      <div className="type">
+        <ul>
+          {pokemons.types.map((type, index) => (
+            <li className={"color-" + type.toLowerCase()} key={index}>
+              {type}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
