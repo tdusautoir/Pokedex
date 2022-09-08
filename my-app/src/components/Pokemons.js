@@ -37,42 +37,44 @@ const Pokemons = () => {
   //if there isn't error display the pokedex
   return !error ? (
     <div className="pokedex-container">
-      <ul className="pokemons-filter">
-        {data.map((pokemons) => {
-          filter.push(...pokemons.types);
-          return "";
-        })}
-        {filter
-          .filter((val, ind, arr) => arr.indexOf(val) === ind)
-          .map((type, index) => (
-            <li key={index}>
-              <input
-                type="radio"
-                id={type}
-                name="typeRadio"
-                //if the type is equal to the value of selectedRadio --> true
-                checked={type === selectedRadio}
-                onChange={(e) => {
-                  setSelectedRadio(e.target.id);
-                  //id of the radio, for example : "feu"
-                }}
-              />
-              <label htmlFor={type}>{type}</label>
-            </li>
-          ))}
-      </ul>
+      <div className="pokemons-filter">
+        <input
+          type="search"
+          name="search"
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
+        />
+        <ul className="radio-container">
+          {data.map((pokemons) => {
+            filter.push(...pokemons.types);
+            return "";
+          })}
+          {filter
+            .filter((val, ind, arr) => arr.indexOf(val) === ind)
+            .map((type, index) => (
+              <li key={index}>
+                <input
+                  type="radio"
+                  id={type}
+                  name="typeRadio"
+                  //if the type is equal to the value of selectedRadio --> true
+                  checked={type === selectedRadio}
+                  onChange={(e) => {
+                    setSelectedRadio(e.target.id);
+                    //id of the radio, for example : "feu"
+                  }}
+                />
+                <label htmlFor={type}>{type}</label>
+              </li>
+            ))}
+        </ul>
+      </div>
       {(selectedRadio || searchTerm) && (
         <button onClick={() => setSelectedRadio("")}>
           Annuler la recherche
         </button>
       )}
-      <input
-        type="search"
-        name="search"
-        onChange={(e) => {
-          setSearchTerm(e.target.value);
-        }}
-      />
       <div className="pokemons-container">
         {selectedRadio
           ? data

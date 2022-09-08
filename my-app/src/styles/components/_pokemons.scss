@@ -4,3 +4,21 @@
     justify-content: center;
     gap: 20px;
 }
+
+.pokemons-filter{ 
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column-reverse;
+    background: rgb(252 125 35 / 48%);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+
+    .radio-container{
+        display: flex;
+        gap: 10px
+    }
+}
