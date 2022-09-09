@@ -42,6 +42,8 @@ const Pokemons = () => {
         <input
           type="search"
           name="search"
+          value={searchTerm}
+          placeholder="Rechercher..."
           onChange={(e) => {
             setSearchTerm(e.target.value);
           }}
@@ -81,8 +83,13 @@ const Pokemons = () => {
             ))}
         </ul>
         {(selectedRadio || searchTerm) && (
-          <button onClick={() => setSelectedRadio("")}>
-            Annuler la recherche
+          <button
+            onClick={() => {
+              setSelectedRadio("");
+              setSearchTerm("");
+            }}
+          >
+            <i className="fa fa-mark"></i>
           </button>
         )}
       </div>
