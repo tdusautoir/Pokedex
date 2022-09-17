@@ -103,9 +103,20 @@
             display: flex;     
             justify-content: center;
             gap: 5px;
+            margin: 0 auto;
+            width: 200px;
+            flex-wrap: wrap;
             
             li{
                 padding: 5px 10px;
+                border-radius: 5px;
+            }
+
+            select{
+                padding: 5px;
+                border: 1px solid #80808000;
+                background: lightgray;
+                color: gray;
                 border-radius: 5px;
             }
         }

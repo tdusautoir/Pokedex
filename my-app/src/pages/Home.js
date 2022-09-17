@@ -8,6 +8,16 @@ const Home = () => {
       <h1>Pokedex</h1>
       <Navigation />
       <Pokemons />
+      {/* 
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log(e.target.test.value);
+        }}
+      >
+        <input name="test" type="text" />
+        <button type="submit">Envoyer </button>
+      </form> */}
     </div>
   );
 };

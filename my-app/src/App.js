@@ -7,9 +7,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/*
-          Erreur 404:
-         <Route path="*" element={<Home />} /> */}
+        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
